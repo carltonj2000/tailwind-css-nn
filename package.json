@@ -4,12 +4,14 @@
   "description": "Tailwind CSS Tutorial",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build src/styles.css -o public/styles.css"
+    "build": "tailwindcss build src/styles.css -o public/styles.css",
+    "dev": "live-server public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "live-server": "^1.2.1",
     "tailwindcss": "^1.4.6"
   }
 }
