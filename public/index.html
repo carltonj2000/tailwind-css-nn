@@ -8,30 +8,42 @@
   </head>
   <body class="text-gray-600 font-body">
     <div class="grid md:grid-cols-3">
-      <div class="col-span-1">
-        <nav>
-          <div>
+      <div class="col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-              <a href="/">Food Ninja</a>
+              <a href="/" class="hover:text-gray-700">Food Ninja</a>
             </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="w-6">
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <ul>
-            <li class="text-gray-700 font-bold">
-              <a href="#">
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-gray-700 font-bold py-1">
+              <a
+                href="#"
+                class="px-4 flex justify-end border-r-4 border-primary"
+              >
                 <span>Home</span>
-                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 ml-2">
                   <path
                     d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
                   ></path>
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="py-1">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
                 <span>
                   About
                 </span>
-                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 ml-2">
                   <path
                     fill-rule="evenodd"
                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
@@ -40,10 +52,10 @@
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#"
-                ><span>Contact</span>
-                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5">
+            <li class="py-1">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                <span>Contact</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 ml-2">
                   <path
                     d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
                   ></path>
@@ -59,12 +71,18 @@
 
       <main class="px-16 py-6 bg-gray-100 md:col-span-2">
         <div class="flex justify-center md:justify-end">
-          <a href="#" class="btn text-primary border-primary md:border-2"
-            >Login</a
+          <a
+            href="#"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-secondary-100 transition ease-out duration-500"
           >
-          <a href="#" class="btn text-primary border-primary md:border-2 ml-2"
-            >Sign up</a
+            Login
+          </a>
+          <a
+            href="#"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-secondary-100 transition ease-out duration-500 ml-2"
           >
+            Sign up
+          </a>
         </div>
 
         <header>
@@ -81,7 +99,8 @@
 
           <div class="mt-8 grid sm:grid-cols-3 gap-10">
             <!-- cards go here -->
-            <div class="card">
+
+            <div class="card hover:shadow-lg">
               <img
                 src="img/stew.jpg"
                 alt="stew"
@@ -106,7 +125,7 @@
                 <span>25 mins</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card hover:shadow-lg">
               <img
                 src="img/noodles.jpg"
                 alt="noodles"
@@ -131,7 +150,7 @@
                 <span>25 mins</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card hover:shadow-lg">
               <img
                 src="img/curry.jpg"
                 alt="curry"
@@ -165,10 +184,15 @@
           <div class="mt-8"></div>
 
           <div class="flex justify-center">
-            <div class="btn bg-secondary-100 text-secondary-200">Load more</div>
+            <div
+              class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-110 hover:bg-opacity-50 transition ease-out duration-300"
+            >
+              Load more
+            </div>
           </div>
         </div>
       </main>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
